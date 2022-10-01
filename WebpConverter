@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in *.webp; do 
+	echo ${i/.webp/}
+	dwebp "$i" -o "${i/.webp/}.png" && rm "$i"
+done
+
